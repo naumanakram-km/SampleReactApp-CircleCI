@@ -1,15 +1,13 @@
-FROM node:16 AS builder
+FROM node:16
 
-WORKDIR /app
+LABEL Author="Nauman"
+
+WORKDIR /reactApp
+
+COPY package*.json ./
+
+RUN npm install
 
 COPY . .
 
-RUN npm run build
-
-FROM nginx:alpine
-
-WORKDIR /usr/share/nginx/html
-
-COPY --from=builder /app/build .
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
