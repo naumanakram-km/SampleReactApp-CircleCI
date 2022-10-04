@@ -35,7 +35,7 @@ jobs:
       
       - notify_slack_error
       - notify_slack_pass       
-
+ 
 workflows:
   version: 2
   executeJobs:
