@@ -10,7 +10,7 @@ commands:
           template: basic_fail_1 
 
   notify_slack_pass:
-    steps:
+    steps: 
       - slack/notify:
           event: pass
           template: basic_success_1
@@ -38,6 +38,6 @@ jobs:
 
 workflows:
   version: 2
-  execute_bulk:
+  executeJobs:
     jobs:
       - build_Deploy
