@@ -34,7 +34,7 @@ jobs:
           command: aws s3 sync ./build s3://gitactionsbucket
       
       - notify_slack_error
-      - notify_slack_pass      
+      - notify_slack_pass       
 
 workflows:
   version: 2
