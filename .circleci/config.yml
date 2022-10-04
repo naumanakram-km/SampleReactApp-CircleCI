@@ -19,7 +19,6 @@ jobs:
     machine: 
       image: ubuntu-2004:202010-01
     steps:
-      - trigger_slack_notification
       - checkout
       - run:
           name: "Installing AWS CLI"
