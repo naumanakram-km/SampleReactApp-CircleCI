@@ -10,8 +10,12 @@ jobs:
             sudo apt-get update
             sudo apt install python3-pip
             sudo pip3 install awsebcli --upgrade
-      - run: cd ./ && npm install && npm run build
-      - run: aws s3 sync ./build s3://gitactionsbucket
+      - run: 
+          name: "Installing Node Modules and Creating Build"
+          command: cd ./ && npm install && npm run build
+      - run: 
+          name: "Updating Bucket!"
+          command: aws s3 sync ./build s3://gitactionsbucket
 
 workflows:
   version: 2
