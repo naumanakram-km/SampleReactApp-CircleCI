@@ -9,6 +9,7 @@ jobs:
     steps:
       - checkout
       - slack/notify: 
+          webhook: "https://hooks.slack.com/services/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"
           color: "#42e2f4"
           message: "Build Started"
       - run:
