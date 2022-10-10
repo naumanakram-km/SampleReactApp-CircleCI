@@ -1,25 +1,16 @@
 version: 2.1 
 orbs:
-  slack: circleci/slack@4.3.0 
- 
-commands:
-  notify_slack_error:
-    steps:
-      - slack/notify:
-          event: fail
-          template: basic_fail_1 
+  slack: circleci/slack@3.4.2
 
-  notify_slack_pass:
-    steps: 
-      - slack/notify: 
-          event: pass 
-          template: basic_success_1
 jobs:
   build_Deploy:
     machine: 
       image: ubuntu-2004:202010-01
     steps:
       - checkout
+      - slack/notify:
+          color: "#42e2f4"
+          message: "Build Started"
       - run:
           name: "Installing AWS CLI"
           command: |
@@ -31,10 +22,7 @@ jobs:
           command: cd ./ && npm install && npm run build
       - run: 
           name: "Updating Bucket!"
-          command: aws s3 sync ./build s3://gitactionsbucket
-      
-      - notify_slack_error
-      - notify_slack_pass       
+          command: aws s3 sync ./build s3://gitactionsbucket     
  
 workflows:
   version: 2
