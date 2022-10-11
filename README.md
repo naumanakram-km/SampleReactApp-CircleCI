@@ -1,1 +1,1 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/naumanakram-km/SampleReactApp-CircleCI/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/naumanakram-km/SampleReactApp-CircleCI/tree/main)
+Status: [![CircleCI](https://dl.circleci.com/status-badge/img/gh/naumanakram-km/SampleReactApp-CircleCI/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/naumanakram-km/SampleReactApp-CircleCI/tree/main)
