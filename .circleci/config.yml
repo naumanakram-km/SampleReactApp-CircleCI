@@ -29,7 +29,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*Build Started For ZAH-Backend*\n*Installing AWS CLI on Build Server*",
+                      "text": "1- *Build Started For ZAH-Backend*\n*Installing AWS CLI on Build Server*",
                       "emoji": true
                     }
                   ]
@@ -52,14 +52,14 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*Installing Node Modules and Creating Build*",
+                      "text": "2- *Installing Node Modules and Creating Build*",
                       "emoji": true
                     }
                   ]
                 }
               ]
             }
-          event: always
+          event: pass
       - run: 
           name: "Installing Node Modules and Creating Build"
           command: cd ./ && npm install && npm run build
@@ -79,7 +79,7 @@ jobs:
                 }
               ]
             }
-          event: always
+          event: pass
       - run: 
           name: "Updating Bucket!"
           command: aws s3 sync ./build s3://gitactionsbucket
