@@ -29,7 +29,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*Build Started For ZAH-Backend *\n Installing AWS CLI on Build Server",
+                      "text": "*Build Started For ZAH-Backend*\n*Installing AWS CLI on Build Server*",
                       "emoji": true
                     }
                   ]
@@ -52,7 +52,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*Installing Node Modules and Creating Build *",
+                      "text": "*Installing Node Modules and Creating Build*",
                       "emoji": true
                     }
                   ]
