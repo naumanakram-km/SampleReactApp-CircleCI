@@ -33,7 +33,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "1- *Build Started For ${CIRCLE_PROJECT_REPONAME} on ${CIRCLE_BRANCH} *\n*Installing AWS CLI on Build Server*",
+                      "text": "1- *Build Started For \b${CIRCLE_PROJECT_REPONAME} on ${CIRCLE_BRANCH} *\n*Installing AWS CLI on Build Server*",
                       "emoji": true
                     }
                   ]
