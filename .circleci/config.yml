@@ -29,8 +29,8 @@ jobs:
                   "type": "section",
                   "fields": [
                     {
-                      "type": "plain_text",
-                      "text": "1- *Build Started For ZAH-Backend*\n*Installing AWS CLI on Build Server*",
+                      "type": "mrkdwn",
+                      "text": "1- *Build Started For ${CIRCLE_PROJECT_REPONAME} on ${CIRCLE_BRANCH} *\n*Installing AWS CLI on Build Server*",
                       "emoji": true
                     }
                   ]
@@ -52,7 +52,7 @@ jobs:
                   "type": "section",
                   "fields": [
                     {
-                      "type": "plain_text",
+                      "type": "mrkdwn",
                       "text": "2- *Installing Node Modules and Creating Build*",
                       "emoji": true
                     }
