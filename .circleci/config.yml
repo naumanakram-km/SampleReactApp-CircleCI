@@ -29,7 +29,7 @@ jobs:
                   "fields": [
                     {
                       "type": "plain_text",
-                      "text": "*Build Started*",
+                      "text": "*Build Started For ZAH-Backend *\n Installing AWS CLI on Build Server",
                       "emoji": true
                     }
                   ]
@@ -43,9 +43,43 @@ jobs:
             sudo apt-get update
             sudo apt install python3-pip
             sudo pip3 install awsebcli --upgrade
+      - slack/notify:
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*Installing Node Modules and Creating Build *",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
       - run: 
           name: "Installing Node Modules and Creating Build"
           command: cd ./ && npm install && npm run build
+      - slack/notify:
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*Updating Bucket!*",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
       - run: 
           name: "Updating Bucket!"
           command: aws s3 sync ./build s3://gitactionsbucket
