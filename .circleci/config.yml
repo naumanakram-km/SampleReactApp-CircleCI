@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout
       - slack/notify:
-          channel: C046129C9T6
+          channel: #testdev2
           custom: |
             {
               "blocks": [
